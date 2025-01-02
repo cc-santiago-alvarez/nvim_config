@@ -7,6 +7,9 @@ return {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
+    },
+    {
+      "nvim-telescope/telescope-ui-select.nvim",  -- Añadir el plugin de UI select
     }
   },
   config = function()
@@ -51,11 +54,18 @@ return {
           override_file_sorter = true,
            case_mode = "smart_case",
         },
+        ["ui-select"] = {  -- Configuración del plugin telescope-ui-select
+          require("telescope.themes").get_dropdown {
+            -- Puedes personalizar el aspecto aquí
+            -- ejemplo: ancho, altura, borde, etc.
+          }
+        }
       },
     })
 
     telescope.load_extension("fzf")
     telescope.load_extension("file_browser")
+     telescope.load_extension("ui-select")  -- Cargar la extensión ui-select
 
     -- Keybindings for Telescope commands
     local map = vim.api.nvim_set_keymap
