@@ -77,10 +77,7 @@ return {
         }),
       })
 
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      require('lspconfig')['tsserver'].setup {
-        capabilities = capabilities
-      }
+      -- Los servidores LSP (y sus capabilities) se configuran en plugins/lsp.lua
 
       require('nvim-autopairs').setup({
         check_ts = true,

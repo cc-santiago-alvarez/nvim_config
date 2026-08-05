@@ -42,7 +42,7 @@ vim.opt.scrolloff = 8  -- Mantiene 8 líneas visibles arriba/abajo del cursor
 vim.opt.sidescrolloff = 8  -- Mantiene 8 columnas visibles a la izquierda/derecha del cursor
 
 -- Opciones de tema (tema "matrix" por ejemplo)
-vim.g.matrix_contrast = true
+vim.g.matrix_contrast = false  -- false: paneles flotantes y sidebars usan el mismo fondo que el editor
 vim.g.matrix_borders = false
 vim.g.matrix_disable_background = false
 vim.g.matrix_italic = false
