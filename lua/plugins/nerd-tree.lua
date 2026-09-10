@@ -17,11 +17,11 @@ return {
         },
       },
       filesystem = {
-        follow_current_file = true,  -- Sigue el archivo actual
+        follow_current_file = { enabled = true },  -- Sigue el archivo actual
         use_libuv_file_watcher = true,  -- Usa el observador de archivos de libuv
       },
       buffers = {
-        follow_current_buffer = true,  -- Sigue el buffer actual
+        follow_current_file = { enabled = true },  -- Sigue el buffer actual
       },
     })
 
